@@ -3,7 +3,12 @@ package com.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+/**
+ * БИБЛИОТЕКА ГАЛЛАКТИК
+ * Программа предназначена для изучения процесса дебага
+ * все ошибки внесены преднамеренно, все совпадения с реальными программами случайны
+ */
+public class GalaxyLibrary {
     private static final List<Galaxy> galaxies = new ArrayList<Galaxy>() {
         {
             add(new Galaxy("Вертушка", 25, new GType("С")));
