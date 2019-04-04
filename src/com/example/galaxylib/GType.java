@@ -1,11 +1,6 @@
 package com.example.galaxylib;
 
 public class GType {
-    @Override
-    public String toString() {
-        return type;
-    }
-
     public GType(String charType) {
         switch (charType) {
             case "С":
@@ -21,8 +16,7 @@ public class GType {
                 type = "Линзовидная";
                 break;
             default:
-                type = "неизвестно";
-                break;
+                throw new RuntimeException("Неизвестный тип галактики!");
         }
     }
 
