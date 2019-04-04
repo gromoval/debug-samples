@@ -1,4 +1,4 @@
-package com.example;
+package com.example.galaxylib;
 
 public class Galaxy {
     public final String name;
