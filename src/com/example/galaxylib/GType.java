@@ -1,6 +1,11 @@
 package com.example.galaxylib;
 
 public class GType {
+    /**
+     * Определяем тип галлактики по коду (первая буква типа)
+     * @param charType код типа - кириллические символы С, Э, Н либо Л
+     * @throws RuntimeException если неправильно указан код
+     */
     public GType(String charType) {
         switch (charType) {
             case "С":
