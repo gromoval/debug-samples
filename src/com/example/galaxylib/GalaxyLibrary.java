@@ -19,7 +19,7 @@ public class GalaxyLibrary {
             add(new Galaxy("Вертушка", 25, new GType("С")));
             add(new Galaxy("Колесо телеги", 100, new GType("Л")));
             add(new Galaxy("Малое Магелланово Облако", 160, new GType("Н")));
-            add(new Galaxy("Головастик", 500, new GType("C")));
+            add(new Galaxy("Головастик", 500, new GType("С")));
             add(new Galaxy("Андромеды", 3, new GType("С")));
             add(new Galaxy("Маффеи 1", 11, new GType("Э")));
         }
@@ -27,7 +27,7 @@ public class GalaxyLibrary {
 
     public static void main(String[] args) {
         showGalaxiesLY(galaxies);
-//        showGalaxiesKm(galaxies);
+        showGalaxiesKm(galaxies);
     }
 
 /* Должно вывести:
@@ -40,8 +40,8 @@ public class GalaxyLibrary {
 */
     private static void showGalaxiesLY(List<Galaxy> galaxies) {
         for (Galaxy galaxy : galaxies) {
-            System.out.println(galaxy.name + ",   " + convertKLY2LY(galaxy.lightYearsDistance) + " сл,   " + galaxy.type);
-        }
+          System.out.printf("%-30s %10d сл %20S\n", galaxy.name, convertKLY2LY(galaxy.lightYearsDistance), galaxy.type);
+      }
     }
 
     /**
@@ -64,13 +64,13 @@ public class GalaxyLibrary {
 */
     private static void showGalaxiesKm(List<Galaxy> galaxies) {
         for (Galaxy galaxy : galaxies) {
-            System.out.println(galaxy.name + ",  " + convertKLY2KM(galaxy.lightYearsDistance) + " км,  " + galaxy.type);
+            System.out.printf("%-30s %20d км %20S\n", galaxy.name, convertKLY2KM(galaxy.lightYearsDistance), galaxy.type);
         }
     }
 
-    private static int convertKLY2KM(int distanceKLY) {
+    private static long convertKLY2KM(int distanceKLY) {
         return KM_IN_LY * convertKLY2LY(distanceKLY);
     }
 
-    private static final int KM_IN_LY = 1298784964;
+    private static final long KM_IN_LY = 1298784964;
 }
